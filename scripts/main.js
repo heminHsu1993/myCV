@@ -12,11 +12,11 @@ $(document).ready(function () {
     $('.video-btn').click(function () {
         $videoSrc = $(this).data("src");
         $videotit = $(this).data("title");
-        $('#modal-video video source').attr('src', $videoSrc);
-        $("#modal-video video").each(function () { this.load() });
+        $('#modal-video iframe').attr('src', $videoSrc);
+        //$("#modal-video video").each(function () { this.load() });
         $('#modal-video h3').html($videotit);
         $('#modal-video').modal('show');
-        $("#modal-video video").each(function () { this.play() });
+        //$("#modal-video video").each(function () { this.play() });
     });
     
     var $imgSrc
@@ -29,7 +29,8 @@ $(document).ready(function () {
     // stop playing the youtube video when I close the modal
     $('#modal-video').on('hide.bs.modal', function (e) {
         // a poor man's stop video
-        $("#modal-video video").each(function () { this.pause() });
+        //$("#modal-video video").each(function () { this.pause() });
+        $('#modal-video iframe').attr('src', "");
     })
 
 });

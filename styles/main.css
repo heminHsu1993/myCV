@@ -7275,6 +7275,7 @@ a.credit {
   position: relative;
   display: inline-block;
   cursor: pointer;
+  max-width: 100%;
   /*margin: 30px;*/
 }
 .video-thumbnail:before {
